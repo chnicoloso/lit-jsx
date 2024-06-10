@@ -1,10 +1,12 @@
 {
   "name": "lit-jsx",
   "version": "1.0.0",
+  "description": "A JSX runtime for lit",
   "main": "index.js",
   "author": {
-    "name": "Christian Nicoloso"
+    "name": "Christian Lista Nicoloso <chnicoloso@gmail.com>"
   },
+  "license": "Apache-2.0",
   "scripts": {
     "build:dev": "node ./esbuild.mjs",
     "build:release": "node ./esbuild.mjs --dist"

@@ -1,30 +1,51 @@
 /**
  * Adapted from: https://open-wc.org/blog/doing-a-flip-with-lit-html-2-0/
- * Added some comments and fixed a small bug where events handlers become undefined
+ * Added some comments and fixed a small bug where events handlers that become undefined
  * weren't getting removed.
  * https://studio.webcomponents.dev/edit/XugyS6YAQnEQXcS7YVKk/src/index.ts?p=website
+ * 
  * This can be removed once Lit has an official spread directive:
  * https://github.com/lit/lit/pull/1960
  */
 
 /**
- * Usage:
- *    import { html, render } from 'lit-html';
- *    import { spread } from './directives';
- *
- *    render(
- *      html`
- *        <div
- *          ${spread({
- *            'my-attribute': 'foo',
- *            '?my-boolean-attribute': true,
- *            '.myProperty': { foo: 'bar' },
- *            '@my-event': () => console.log('my-event fired'),
- *          })}
- *        ></div>
- *      `,
- *      document.body,
- *    );
+ * @license
+ * Original code by open-wc.org, licensed under the BSD-3-Clause license.
+ * SPDX-License-Identifier: BSD-3-Clause
+ * 
+ * Additional modifications are copyright 2024 Christian Lista Nicoloso and licensed under the Apache License 2.0.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/**
+ * Original License:
+ * -----------------
+ * 
+ * Copyright 2021 Open WC
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
+/**
+ * Apache License 2.0 for Additional Modifications:
+ * -----------------
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * Changes made:
+ * - Added comments to the code.
+ * - Fixed a small bug where event handlers that become undefined weren't getting removed.
  */
 
 import { nothing } from 'lit/html.js';
