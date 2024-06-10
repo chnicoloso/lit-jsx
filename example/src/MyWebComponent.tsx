@@ -1,5 +1,3 @@
-// /** @jsxImportSource lit-jsx */
-
 import { LitElement, state, createRef, customElement, property } from 'lit-jsx';
 // import { LitElement, state, Ref, createRef, customElement, property } from 'lit-jsx';
 
@@ -32,13 +30,6 @@ class ClassComponent extends LitElement {
 @customElement('counter-wc')
 export default class Counter extends LitElement {
 
-    // constructor() {
-    //     super();
-    //     setInterval(() => {
-    //         this._counter++;
-    //     }, 1000);
-    // }
-
     // Render the UI as a function of component state
     @state()
     private _counter = 0;
@@ -52,11 +43,13 @@ export default class Counter extends LitElement {
 
     render() {
         return (
-            // <FunctionalComponent onClick={this._increment} count={this._counter} />
-            <ClassComponent ref={this._ref} onClick={this._counter > 5 ? null : this._increment} count={this._counter} />
-            // <button ref={this._ref} onClick={this._counter > 5 ? null : this._increment}>
-            //     Hi {this._counter}
-            // </button>
+            <>
+                <FunctionalComponent onClick={this._increment} count={this._counter} />
+                <ClassComponent ref={this._ref} onClick={this._counter > 5 ? null : this._increment} count={this._counter} />
+                <button ref={this._ref} onClick={this._counter > 5 ? null : this._increment}>
+                    Hi {this._counter}
+                </button>
+            </>
         );
     }
 }
