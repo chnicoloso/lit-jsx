@@ -2,7 +2,7 @@ import type { RootElement } from '../types';
 
 export class Root {
 
-    _container: RootElement;
+    _container?: RootElement;
     _elements: HTMLElement[] = [];
 
     static _roots = new Map<RootElement, Root>();
@@ -22,7 +22,7 @@ export class Root {
     render(element: HTMLElement) {
         // Keep track of all elements rendered directly on the root.
         this._elements.push(element);
-        this._container.appendChild(element);
+        this._container?.appendChild(element);
         return element;
     }
 

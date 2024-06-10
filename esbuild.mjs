@@ -2,6 +2,7 @@ import * as fs from 'fs/promises';
 import * as esbuild from 'esbuild';
 import { glob } from 'glob';
 import esbuildPluginTsc from 'esbuild-plugin-tsc';
+import { dtsPlugin } from "esbuild-plugin-d.ts";
 import { program } from 'commander';
 
 program.option('--dist', 'Enable distribution mode');
@@ -25,6 +26,7 @@ async function compile(src) {
         force: true,
         tsconfigPath: './tsconfig.json',
       }),
+      dtsPlugin()
     ],
   });
 }

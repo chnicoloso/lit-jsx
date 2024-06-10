@@ -53,7 +53,7 @@ export function parseChildren(children = [], registry: ElementRegistry) {
     for (const child of children) {
         const wrapper = registry[typeof child];
         parsedChildren.push(wrapper
-            ? html`<${wrapper}>${child}</${wrapper}>`
+            ? html`<${wrapper}>${child}</${wrapper}>` as never
             : child
         );
     }
