@@ -11,15 +11,13 @@ npm install lit-jsx
 ```
 
 ## Usage
-To use `lit-jsx`, import it instead of `lit` in your project. You also need to configure your bundler or transpiler to use `lit-jsx` for processing JSX, instead of the default i.e `react-jsx`, etc. For example, in TypeScript, you would set `jsxImportSource` to `lit-jsx` in your tsconfig.json:
+To use `lit-jsx`, import it instead of `lit` wherever you would use `lit` in your project. You also need to configure your bundler or transpiler to use `lit-jsx` for processing JSX, instead of the default i.e `react-jsx`, etc. For example for TypeScript, in your tsconfig.json, you you would set `jsx` to `react-jsx`, to enable JSX syntax in general and then `jsxImportSource` to `lit-jsx`, to tell typescript to use `lit-jsx/jsx-runtime` when transforming JSX syntax:
 
 ```json
 {
   "compilerOptions": {
     ...
-     // This configures Typescript to parse JSX.
     "jsx": "react-jsx",
-    // This tells Typescript to use lit-jsx when transforming JSX.
     "jsxImportSource": "lit-jsx",
     ...
   }
