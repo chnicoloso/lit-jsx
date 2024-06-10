@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "module": "es6",
+        "target": "es6",
+        // We'll transpile the JSX with Babel to insert our own JSX runtime
+        // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html
+        // https://babeljs.io/docs/en/babel-plugin-transform-react-jsx
+        "jsx": "preserve",
+        "allowJs": true,
+        "resolveJsonModule": true,
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        // https://lit.dev/docs/components/properties/#avoiding-issues-with-class-fields
+        "useDefineForClassFields": false
+    }
+}
