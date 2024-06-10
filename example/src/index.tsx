@@ -1,4 +1,5 @@
 import * as LitJSX from 'lit-jsx';
+console.warn('LitJSX', LitJSX);
 import MyWebComponent from './MyWebComponent';
 
 // This is an example of how someone might use the framework to develop their web site.
