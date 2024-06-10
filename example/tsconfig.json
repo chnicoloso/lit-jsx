@@ -7,8 +7,8 @@
     "target": "es6",
     // This enables Typescript to parse JSX.
     "jsx": "react-jsx",
-    // This tells Typescript to use litjsx when transforming JSX.
-    "jsxImportSource": "litjsx",
+    // This tells Typescript to use lit-jsx when transforming JSX.
+    "jsxImportSource": "@chnicoloso/lit-jsx",
     "allowJs": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,

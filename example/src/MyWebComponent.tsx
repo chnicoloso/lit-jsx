@@ -1,4 +1,4 @@
-import { LitElement, state, Ref, createRef, customElement, property } from 'litjsx';
+import { LitElement, state, Ref, createRef, customElement, property } from '@chnicoloso/lit-jsx';
 
 function FunctionalComponent({ onClick, count }) {
     return (
