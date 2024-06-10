@@ -1,5 +1,5 @@
 {
-    "name": "lit-jsx-example",
+    "name": "litjsx-example",
     "version": "1.0.0",
     "main": "index.js",
     "author": {
@@ -9,7 +9,7 @@
       "watch": "webpack serve --hot --mode=development --config ./webpack.config.js"
     },
     "dependencies": {
-        "lit-jsx": "file:../dist"
+        "litjsx": "file:../dist"
     },
     "devDependencies": {
       "babel-loader": "^8.2.5",

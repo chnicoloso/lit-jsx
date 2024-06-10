@@ -1,4 +1,4 @@
-import * as LitJSX from 'lit-jsx';
+import * as LitJSX from 'litjsx';
 import MyWebComponent from './MyWebComponent';
 
 // This is an example of how someone might use the framework to develop their web site.

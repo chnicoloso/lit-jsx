@@ -1,24 +1,24 @@
-# lit-jsx
+# litjsx
 
-`lit-jsx` is a library that allows you to use the Lit framework with JSX. It provides a convenient way to build web components using JSX syntax. The only dependency for this library is `lit`.
+`litjsx` (`lit-jsx` was taken...) is a library that allows you to use the Lit framework with JSX. It provides a convenient way to build web components using JSX syntax. The only dependency for this library is `lit`.
 
 ## Installation
 
-You can install `lit-jsx` via npm:
+You can install `litjsx` via npm:
 
 ```bash
-npm install lit-jsx
+npm install litjsx
 ```
 
 ## Usage
-To use `lit-jsx`, import it instead of `lit` wherever you would use `lit` in your project. You also need to configure your bundler or transpiler to use `lit-jsx` for processing JSX, instead of the default i.e `react-jsx`, etc. For example for TypeScript, in your tsconfig.json, you you would set `jsx` to `react-jsx`, to enable JSX syntax in general and then `jsxImportSource` to `lit-jsx`, to tell typescript to use `lit-jsx/jsx-runtime` when transforming JSX syntax:
+To use `litjsx`, import it instead of `lit` wherever you would use `lit` in your project. You also need to configure your bundler or transpiler to use `lit-jsx` for processing JSX, instead of the default i.e `react-jsx`, etc. For example for TypeScript, in your tsconfig.json, you you would set `jsx` to `react-jsx`, to enable JSX syntax in general and then `jsxImportSource` to `litjsx`, to tell typescript to use `litjsx/jsx-runtime` when transforming JSX syntax:
 
 ```json
 {
   "compilerOptions": {
     ...
     "jsx": "react-jsx",
-    "jsxImportSource": "lit-jsx",
+    "jsxImportSource": "litjsx",
     ...
   }
 }
@@ -27,7 +27,7 @@ To use `lit-jsx`, import it instead of `lit` wherever you would use `lit` in you
 ### Example
 ```typescript
 // index.ts
-import * as LitJSX from 'lit-jsx';
+import * as LitJSX from 'litjsx';
 import MyWebComponent from './MyWebComponent';
 
 // This is an example of how someone might use the framework to develop their web site.
@@ -46,7 +46,7 @@ window.addEventListener('beforeunload', onUnload);
 ```
 ```typescript
 // MyWebComponent.tsx
-import { LitElement, state, Ref, createRef, customElement, property } from 'lit-jsx';
+import { LitElement, state, Ref, createRef, customElement, property } from 'litjsx';
 
 function FunctionalComponent({ onClick, count }) {
     return (

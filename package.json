@@ -1,16 +1,25 @@
 {
-  "name": "lit-jsx",
+  "name": "litjsx",
   "version": "1.0.0",
-  "description": "A JSX runtime for lit",
-  "main": "index.js",
+  "description": "A JSX runtime for Lit",
+  "main": "dist/index.js",
   "author": {
     "name": "Christian Lista Nicoloso <chnicoloso@gmail.com>"
   },
   "license": "Apache-2.0",
   "scripts": {
     "build:dev": "node ./esbuild.mjs",
-    "build:release": "node ./esbuild.mjs --dist"
+    "build:release": "node ./esbuild.mjs --dist",
+    "prepublishOnly": "npm run build:release"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chnicoloso/litjsx.git"
+  },
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
   "dependencies": {
     "lit": "^2.3.0"
   },

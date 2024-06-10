@@ -47,12 +47,12 @@ export type CustomElementClass = Omit<typeof HTMLElement, 'new'>;
 
 /**
  * A map of html tag names to the name of the html template literal to use when rendering it.
- * Defined by {@link lit-jsx/core/elementRegistry}
+ * Defined by {@link litjsx/core/elementRegistry}
  */
 export type ElementRegistry = { [ key: HTMLElement['tagName'] ]: StaticValue };
 
 /**
  * The top level HTMLElement to render all other components on.
- * User-created, handled in {@link lit-jsx/core/createElement}
+ * User-created, handled in {@link litjsx/core/createElement}
  */
 export type RootElement = Element | Document | DocumentFragment;
