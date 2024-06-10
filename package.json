@@ -2,7 +2,7 @@
   "name": "@chnicoloso/lit-jsx",
   "version": "1.0.0",
   "description": "A JSX runtime for Lit",
-  "main": "dist/index.js",
+  "main": "dist",
   "author": {
     "name": "Christian Lista Nicoloso <chnicoloso@gmail.com>"
   },
