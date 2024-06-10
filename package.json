@@ -1,8 +1,13 @@
 {
   "name": "@chnicoloso/lit-jsx",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A JSX runtime for Lit",
-  "main": "dist",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./jsx-runtime": "./dist/jsx-runtime.js"
+  },
   "author": {
     "name": "Christian Lista Nicoloso <chnicoloso@gmail.com>"
   },
