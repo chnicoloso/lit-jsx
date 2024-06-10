@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "module": "es6",
+    "target": "es6",
+    // We'll transpile the JSX with Babel to insert our own JSX runtime
+    // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html
+    // https://babeljs.io/docs/en/babel-plugin-transform-react-jsx
+    "jsx": "react-jsx",
+    // This tells Typescript to use lit-jsx to transform the JSX.
+    "jsxImportSource": "lit-jsx",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    },
+}
+    

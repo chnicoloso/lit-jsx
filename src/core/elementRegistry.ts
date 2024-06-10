@@ -4,7 +4,7 @@
  * See {@link twixt/elementRegistry} for TwixtCanvas overrides.
  */
 import { literal } from 'lit/static-html.js'
-import type { ElementRegistry } from 'src/types';
+import type { ElementRegistry } from '../types';
 
 // Lit template tags are typically not allowed to be set dynamically.
 // The only way it's allowed is if the dynamic value is marked as a `literal` and used in a static expression.

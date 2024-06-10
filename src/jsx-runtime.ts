@@ -1,5 +1,5 @@
-import customElementRegistry from 'src/utils/customElementRegistry';
-import createElement from 'src/core/createElement';
+import customElementRegistry from './utils/customElementRegistry';
+import createElement from './core/createElement';
 
 // JSX runtime. This is what will translate JSX and create actual html elements.
 function jsx(type, config) {
@@ -13,7 +13,7 @@ function jsx(type, config) {
             // to get the tag name of the custom element from its constructor, which unfortunately is not currently possible.
             // So for now, we keep an internal registry of all web components we've registered, falling back to
             // constructing the element once to get its `.localName`.
-            // See {@link src/twixt/decorators/customElement} for more info.
+            // See {@link src/decorators/customElement} for more info.
             let tagName = customElementRegistry.get(type);
             if (!tagName) {
                 // We have to construct the element to get its tag name.

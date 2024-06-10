@@ -1,4 +1,4 @@
-import type { RootElement } from 'src/types';
+import type { RootElement } from '../types';
 
 export class Root {
 

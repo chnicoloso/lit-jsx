@@ -8,8 +8,8 @@
  * https://github.com/WICG/webcomponents/issues/566
  */
 
-import type { CustomElementClass, ClassDescriptor, Constructor } from 'src/types';
-import customElementRegistry from 'src/utils/customElementRegistry';
+import type { CustomElementClass, ClassDescriptor, Constructor } from '../types';
+import customElementRegistry from '../utils/customElementRegistry';
 
 /**
  * @license

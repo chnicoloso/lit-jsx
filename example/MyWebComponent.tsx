@@ -1,6 +1,7 @@
-/** @jsxImportSource src */
+// /** @jsxImportSource lit-jsx */
 
-import { LitElement, state, Ref, createRef, customElement, property } from 'src';
+import { LitElement, state, createRef, customElement, property } from 'lit-jsx';
+// import { LitElement, state, Ref, createRef, customElement, property } from 'lit-jsx';
 
 function FunctionalComponent({ onClick, count }) {
     return (
@@ -42,7 +43,8 @@ export default class Counter extends LitElement {
     @state()
     private _counter = 0;
     
-    private _ref: Ref<HTMLElement> = createRef();
+    // private _ref: Ref<HTMLElement> = createRef();
+    private _ref = createRef();
 
     private _increment = (e) => {
         this._counter++;

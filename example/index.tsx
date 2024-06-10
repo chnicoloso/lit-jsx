@@ -1,8 +1,11 @@
-import * as LitJSX from 'src';
-import MyWebComponent from 'example/MyWebComponent';
+import * as LitJSX from 'lit-jsx';
+import MyWebComponent from './MyWebComponent';
 
 // This is an example of how someone might use the framework to develop their web site.
-const root = LitJSX.createRoot(document.getElementById('root'));
+const app = document.createElement('div');
+document.body.appendChild(app);
+
+const root = LitJSX.createRoot(app);
 root.render(new MyWebComponent());
 
 // Clean up.

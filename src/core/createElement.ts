@@ -1,9 +1,9 @@
 import { ref } from 'lit/directives/ref.js';
 import { html } from 'lit/static-html.js';
 import { styleMap } from 'lit/directives/style-map.js';
-import { spread } from 'src/directives/spread';
-import { getHTMLTag, parseProps, parseChildren } from 'src/utils/elementUtils';
-import defaultElementRegistry from 'src/core/elementRegistry';
+import { spread } from '../directives/spread';
+import { getHTMLTag, parseProps, parseChildren } from '../utils/elementUtils';
+import defaultElementRegistry from '../core/elementRegistry';
 
 // Allow users to customize what should be rendered for each tag name.
 // i.e if someone wants JSX <button /> to result in <my-custom-button /> they

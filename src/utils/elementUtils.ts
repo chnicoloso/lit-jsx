@@ -1,6 +1,6 @@
 import { html, unsafeStatic } from 'lit/static-html.js';
-import { getNativeEventName } from 'src/utils/eventUtils';
-import type { ElementRegistry } from 'src/types';
+import { getNativeEventName } from '../utils/eventUtils';
+import type { ElementRegistry } from '../types';
 
 export function getHTMLTag(type, registry: ElementRegistry) {
     if (window.customElements.get(type)) {

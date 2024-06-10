@@ -1,4 +1,4 @@
-import { CustomElementClass, ClassDescriptor } from 'src/types';
+import { CustomElementClass, ClassDescriptor } from '../types';
 
 /**
  * A map of custom element constructors to the tag names they're registered under.
