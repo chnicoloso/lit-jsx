@@ -1,6 +1,6 @@
 # litjsx
 
-`litjsx` (`lit-jsx` was taken...) is a library that allows you to use the Lit framework with JSX. It provides a convenient way to build web components using JSX syntax. The only dependency for this library is `lit`.
+`litjsx` is a library that allows you to use the Lit framework with JSX. It provides a convenient way to build web components using JSX syntax. The only dependency for this library is `lit`.
 
 ## Installation
 
