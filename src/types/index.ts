@@ -22,7 +22,7 @@ export type Constructor<T> = {
     new (...args: any[]): T;
 };
   
-  // From the TC39 Decorators proposal
+// From the TC39 Decorators proposal
 export interface ClassDescriptor {
     kind: 'class';
     elements: ClassElement[];
