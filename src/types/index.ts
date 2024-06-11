@@ -23,7 +23,7 @@ export type Constructor<T> = {
 };
   
   // From the TC39 Decorators proposal
-  export interface ClassDescriptor {
+export interface ClassDescriptor {
     kind: 'class';
     elements: ClassElement[];
     finisher?: <T>(clazz: Constructor<T>) => void | Constructor<T>;

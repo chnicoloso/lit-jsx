@@ -1,6 +1,10 @@
 import { LitElement, state, Ref, createRef, customElement, property } from '@chnicoloso/lit-jsx';
 
-function FunctionalComponent({ onClick, count }) {
+interface FunctionalComponentProps {
+    onClick: () => void;
+    count: number;
+}
+function FunctionalComponent({ onClick, count }: FunctionalComponentProps) {
     return (
         <button onClick={onClick}>
             Bye {count}
@@ -12,10 +16,10 @@ function FunctionalComponent({ onClick, count }) {
 class ClassComponent extends LitElement {
 
     @property({ type: Number })
-    count: number;
+    count?: number;
 
     @property({ type: Function })
-    onClick: Function;
+    onClick?: (e: any) => void;
 
     render() {
         return (
@@ -35,7 +39,7 @@ export default class Counter extends LitElement {
     
     private _ref: Ref<HTMLElement> = createRef();
 
-    private _increment = (e) => {
+    private _increment = () => {
         this._counter++;
     }
 
@@ -44,7 +48,7 @@ export default class Counter extends LitElement {
             <>
                 <FunctionalComponent onClick={this._increment} count={this._counter} />
                 <ClassComponent ref={this._ref} onClick={this._counter > 5 ? null : this._increment} count={this._counter} />
-                <button ref={this._ref} onClick={this._counter > 5 ? null : this._increment}>
+                <button ref={this._ref} onClick={this._counter > 5 ? undefined : this._increment}>
                     Hi {this._counter}
                 </button>
             </>
