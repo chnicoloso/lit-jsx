@@ -15,7 +15,7 @@
  */
 
 export type { PropertyValues } from '@lit/reactive-element';
-import { StaticValue } from 'lit/static-html';
+import { StaticValue } from 'lit/static-html.js';
 
 export type Constructor<T> = {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

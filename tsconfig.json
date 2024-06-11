@@ -1,9 +1,8 @@
 {
     "compilerOptions": {
-      "target": "esnext",
-      "module": "esnext",
-      "moduleResolution": "node",
-      "lib": [ "esnext", "dom" ],
+      "target": "es6",
+      "module": "es6",
+      "moduleResolution": "bundler",
       "declaration": true,
       "esModuleInterop": true,
       "noImplicitAny": false,
