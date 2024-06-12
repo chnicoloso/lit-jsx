@@ -13,7 +13,7 @@ npm install @chnicoloso/lit-jsx
 ```
 
 ## Usage
-To use `lit-jsx` simply import from `@chnicoloso/lit-jsx` wherever you would otherwise import from `lit`. You also need to configure your bundler or transpiler to use `lit-jsx` for processing JSX, instead of the default. For example in TypeScript you would add something like this to your `tsconfig.json`:
+To use `lit-jsx` simply import from `@chnicoloso/lit-jsx` whatever you would otherwise import from `lit`. You also need to configure your bundler or transpiler to use `lit-jsx` for processing JSX, instead of the default. For example in TypeScript you would add something like this to your `tsconfig.json`:
 
 ```json
 {
@@ -42,16 +42,24 @@ There is a similar mechanism for Babel where you would add something like this t
 
 ### Example
 ```typescript
-// index.ts
-import * as LitJSX from '@chnicoloso/lit-jsx';
-import MyWebComponent from './MyWebComponent';
+import { LitElement, createRoot, customElement } from '@chnicoloso/lit-jsx';
 
-// This is an example of how someone might use the framework to develop their web site.
+@customElement('my-app')
+class App extends LitElement {
+    render() {
+        return (
+            <button onClick={console.log}>
+                Click Me!
+            </button>
+        );
+    }
+}
+
 const app = document.createElement('div');
 document.body.appendChild(app);
 
-const root = LitJSX.createRoot(app);
-root.render(new MyWebComponent());
+const root = createRoot(app);
+root.render(new App());
 
 // Clean up.
 const onUnload = () => {
@@ -59,66 +67,6 @@ const onUnload = () => {
     root.unmount();
 };
 window.addEventListener('beforeunload', onUnload);
-```
-```typescript
-// MyWebComponent.tsx
-import { LitElement, state, Ref, createRef, customElement, property } from '@chnicoloso/lit-jsx';
-
-interface FunctionalComponentProps {
-    onClick: () => void;
-    count: number;
-}
-function FunctionalComponent({ onClick, count }: FunctionalComponentProps) {
-    return (
-        <button onClick={onClick}>
-            Bye {count}
-        </button>
-    );
-}
-
-@customElement('class-component-wc')
-class ClassComponent extends LitElement {
-
-    @property({ type: Number })
-    count?: number;
-
-    @property({ type: Function })
-    onClick?: (e: any) => void;
-
-    render() {
-        return (
-            <button onClick={this.onClick}>
-                Wow {this.count}
-            </button>
-        );
-    }
-}
-
-@customElement('counter-wc')
-export default class Counter extends LitElement {
-
-    // Render the UI as a function of component state
-    @state()
-    private _counter = 0;
-    
-    private _ref: Ref<HTMLElement> = createRef();
-
-    private _increment = () => {
-        this._counter++;
-    }
-
-    render() {
-        return (
-            <>
-                <FunctionalComponent onClick={this._increment} count={this._counter} />
-                <ClassComponent ref={this._ref} onClick={this._counter > 5 ? null : this._increment} count={this._counter} />
-                <button ref={this._ref} onClick={this._counter > 5 ? undefined : this._increment}>
-                    Hi {this._counter}
-                </button>
-            </>
-        );
-    }
-}
 ```
 
 ### Running the Example
