@@ -102,7 +102,7 @@ resetElements();
 
 The original motivation behind this jsx-runtime was for a WebXR UI framework I was working on. In WebXR, any UI you make _has_ to be rendered using Canvas/webgl which is as fun as it sounds so I wanted to be able to define UI components using HTML syntax. My basic idea was to create webgl/three-js versions of each HTML element and then configure `lit-jsx` so that whenever the JSX called for say, a “button” to be rendered, the webgl equivalent would be rendered instead.
 
-I got a fair amount of it working including divs, images, text, flex-blox/responsiveness, border-radii, background colors, etc.
+I got a fair amount of it working including divs, images, text, overflow management, scroll bars, flex-box, border-radii, background colors, etc.
 <details>
 <summary>Expand to see the code for this "component"</summary>
 
