@@ -1,6 +1,6 @@
 {
   "name": "@chnicoloso/lit-jsx",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A JSX runtime for Lit",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -18,7 +18,7 @@
     }
   },
   "author": {
-    "name": "Christian Lista Nicoloso <chnicoloso@gmail.com>"
+    "name": "Christian Nicoloso <chnicoloso@gmail.com>"
   },
   "license": "Apache-2.0",
   "scripts": {
